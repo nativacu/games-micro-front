@@ -21,7 +21,7 @@ export class ProductsComponent  {
   }
 
   async onGameSelect(game: Game) {
-    await this.router.navigate(['/products', game.id]);
+    await this.router.navigate(['/games', game.id]);
   }
 }
 

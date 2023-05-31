@@ -10,7 +10,7 @@ sharedMappings.register(
 
 module.exports = {
   output: {
-    uniqueName: "games",
+    uniqueName: "remoteapp1",
     publicPath: "http://localhost:4202/"
   },
   optimization: {
@@ -29,10 +29,10 @@ module.exports = {
         library: { type: "module" },
 
         // For remotes (please adjust)
-        name: "games",
+        name: "remoteapp1",
         filename: "remoteEntry.js",
         exposes: {
-            './Module': './/src/app/app.module.ts',
+            './ProductsModule': './/src/app/products/products.module.ts'
         },
 
         // For hosts (please adjust)
