@@ -92,7 +92,7 @@ export const mockGames: Game[] = [
     id: 9,
     title: "Assassin's Creed Valhalla",
     rating: "9.4",
-    imageUrl: "https://example.com/assassinscreedvalhalla.jpg",
+    imageUrl: "https://fastly.picsum.photos/id/61/3264/2448.jpg?hmac=Xi3Kq99U5tueFi0aajgUP0yWAL4xwCHg5ZXGZRLTqyI",
     description: "Become a legendary Viking raider in the ninth installment of the series.",
     price: 59.99,
     releaseDate: "November 10, 2020",
