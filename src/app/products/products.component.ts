@@ -17,7 +17,13 @@ export class ProductsComponent  {
 
   likeGame(game: Game) {
 			game.liked = !game.liked;
+			this.saveLikedGames();
   }
+
+	saveLikedGames() {
+		const likedGames = this.gameData.filter(game => game.liked).map(game => game.title);
+		localStorage.setItem('likedGames', JSON.stringify(likedGames));
+	}
 }
 
 
