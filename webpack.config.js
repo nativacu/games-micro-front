@@ -11,8 +11,8 @@ sharedMappings.register(
 module.exports = {
   output: {
     uniqueName: "remoteapp1",
-    // publicPath: "auto",
-		publicPath: "http://stately-moonbeam-b1b702.netlify.app/",
+    // publicPath: "http://localhost:4202/
+		publicPath: "https://stately-moonbeam-b1b702.netlify.app/",
 		scriptType: "text/javascript",
   },
   optimization: {
