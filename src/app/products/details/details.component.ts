@@ -13,7 +13,8 @@ export class DetailsComponent implements OnInit {
   public product: Game | undefined;
   constructor(
     private route: ActivatedRoute,
-    private _productService: ProductsService
+    private _productService: ProductsService,
+		private router: Router
   ) {}
 
   ngOnInit(): void {
@@ -26,4 +27,8 @@ export class DetailsComponent implements OnInit {
       this.product =  this._productService.getGameById(this.gameId);
     });
   }
+
+	goBackToList() {
+		this.router.navigate(['/products']);
+	}
 }

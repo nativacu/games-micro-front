@@ -11,7 +11,8 @@ sharedMappings.register(
 module.exports = {
   output: {
     uniqueName: "remoteapp1",
-    publicPath: "http://localhost:4202/"
+    publicPath: "http://localhost:4202/",
+		scriptType: "text/javascript",
   },
   optimization: {
     runtimeChunk: false
@@ -44,14 +45,12 @@ module.exports = {
         shared: share({
           "@angular/core": { singleton: true, strictVersion: true, requiredVersion: 'auto' },
           "@angular/common": { singleton: true, strictVersion: true, requiredVersion: 'auto' },
-          "@angular/common/http": { singleton: true, strictVersion: true, requiredVersion: 'auto' },
           "@angular/router": { singleton: true, strictVersion: true, requiredVersion: 'auto' },
           "@angular/animations": { singleton: true, strictVersion: true, requiredVersion: 'auto'},
           "@angular/platform-browser": { singleton: true, strictVersion: true, requiredVersion: 'auto'},
           "@angular/platform-browser-dynamic": { singleton: true, strictVersion: true, requiredVersion: 'auto'},
           "@angular/material": { singleton: true, strictVersion: true, requiredVersion: 'auto'},
           "@angular/cdk": { singleton: true, strictVersion: true, requiredVersion: 'auto'},
-
 
           ...sharedMappings.getDescriptors()
         })

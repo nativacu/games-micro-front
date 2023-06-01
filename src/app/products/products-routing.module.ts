@@ -4,6 +4,7 @@ import {DetailsComponent} from "./details/details.component";
 import {ProductsComponent} from "./products.component";
 
 const routes: Routes = [
+	{path: '', component: ProductsComponent},
 	{path: 'games', component: ProductsComponent},
 	{path: 'games/:id', component: DetailsComponent},
 	{path: '', redirectTo: '/games', pathMatch: 'full'},
