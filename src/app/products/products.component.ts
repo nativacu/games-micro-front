@@ -1,5 +1,5 @@
 // products.component.ts
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, VERSION } from '@angular/core';
 import {Game} from "./models/game";
 import {mockGames} from "./assets/mock-games";
 import {Router} from "@angular/router";
@@ -10,10 +10,11 @@ import {Router} from "@angular/router";
   styleUrls: ['./products.component.scss']
 })
 export class ProductsComponent implements OnInit {
-  public displayedColumns: string[] = ['title', 'rating', 'image', 'description', 'like'];
-  public gameData: Game[] = mockGames;
+	public ngVersion = VERSION.full;
+	public displayedColumns: string[] = ['title', 'rating', 'image', 'description', 'like'];
+	public gameData: Game[] = mockGames;
 
-  constructor(private router: Router) {}
+	constructor(private router: Router) {}
 	ngOnInit() {
 		this.updateLikedGamesFromStorage();
 	}
@@ -31,10 +32,10 @@ export class ProductsComponent implements OnInit {
 		});
 	}
 
-  likeGame(game: Game) {
-			game.liked = !game.liked;
-			this.saveLikedGames();
-  }
+	likeGame(game: Game) {
+		game.liked = !game.liked;
+		this.saveLikedGames();
+	}
 
 	saveLikedGames() {
 		const likedGames = this.gameData.filter(game => game.liked).map(game => game.title);
